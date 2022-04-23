@@ -3,7 +3,7 @@ const PORT = process.env.PORT || 3500;
 
 // this sets up the server
 const app = express();
-// const apiRoutes = require('./routes/apiRoutes')
+const apiRoutes = require('./routes/apiRoutes')
 const htmlRoutes = require('./routes/htmlRoutes')
 
 const fs = require("fs")
@@ -14,11 +14,12 @@ app.use(express.static("public"))
 // this parses the incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 
-// app.use('/api', apiRoutes)
-app.use('/', htmlRoutes)
+
 
 // parse incoming JSON data
 app.use(express.json());
+app.use('/api', apiRoutes)
+app.use('/', htmlRoutes)
 
 
 
