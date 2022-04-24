@@ -1,17 +1,17 @@
 // this page will set up the get and port requests to send back API data
 const router = require('express').Router();
 const { findById, createNewNote, validateNote } = require("../../lib/note")
-const { data } = require("../../data/db.json")
+const { note } = require("../../data/db.json")
 
 router.get("/notes", (req, res) => {
-    let notes = data;
-    res.json(notes)
+    let noteVar = note;
+    res.json(noteVar)
 });
 
 router.get("/notes/:id", (req, res) => {
-    let notes = findById(req.params.id, animals)
-    if (notes) {
-        res.json(notes);
+    let noteVar = findById(req.params.id, note)
+    if (noteVar) {
+        res.json(noteVar);
     } else {
         res.send(404)
     }
@@ -19,13 +19,13 @@ router.get("/notes/:id", (req, res) => {
 
 router.post("/notes", (req, res) => {
     // this will set a new ID increasing in one number every time
-    // req.body.id = data.length.toString();
+    req.body.id = note.length.toString();
 
-    if (!validateNote) {
+    if (!validateNote(req.body)) {
         res.status(400).send("This note was not properly formatted before entering!")
     } else {
-        let note = createNewNote(req.body, data)
-        res.json(note)
+        let noteVar = createNewNote(req.body, note)
+        res.json(noteVar)
     }
 })
 

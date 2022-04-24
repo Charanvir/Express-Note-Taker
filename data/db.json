@@ -1,6 +1,24 @@
-[
+{
+  "note": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "id": "0",
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "Testing",
+      "text": "Testing if note is being added and whether an ID is being given to the new note",
+      "id": "1"
+    },
+    {
+      "title": "Note 3",
+      "text": "Testing after modifications",
+      "id": "2"
+    },
+    {
+      "title": "testing POST route",
+      "text": "this note is to test on Insomnia whether a new note is being added to the database file",
+      "id": "3"
     }
-]
+  ]
+}
