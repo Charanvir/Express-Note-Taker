@@ -1,13 +1,16 @@
 // this page will set up the get and port requests to send back API data
 const router = require('express').Router();
+// this allows this file to use the functions created in the note.js file in the lib folder
 const { findById, createNewNote, validateNote } = require("../../lib/note")
 const { note } = require("../../data/db.json")
 
+// this returns the client the JSON formatted database
 router.get("/notes", (req, res) => {
     let noteVar = note;
     res.json(noteVar)
 });
 
+// This returns a specific note in a JSON formatted style
 router.get("/notes/:id", (req, res) => {
     let noteVar = findById(req.params.id, note)
     if (noteVar) {
@@ -17,6 +20,7 @@ router.get("/notes/:id", (req, res) => {
     }
 });
 
+// this functions lets the user enter a new note and save it into the database
 router.post("/notes", (req, res) => {
     // this will set a new ID increasing in one number every time
     req.body.id = note.length.toString();

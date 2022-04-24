@@ -19,6 +19,11 @@
       "title": "testing POST route",
       "text": "this note is to test on Insomnia whether a new note is being added to the database file",
       "id": "3"
+    },
+    {
+      "title": "Note 5",
+      "text": "Text for Note 5",
+      "id": "4"
     }
   ]
 }
