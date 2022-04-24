@@ -1,29 +1,19 @@
 {
   "note": [
     {
-      "id": "0",
-      "title": "Test Title",
-      "text": "Test text"
+      "title": "First Note",
+      "text": "This note should have an ID of 0",
+      "id": "0"
     },
     {
-      "title": "Testing",
-      "text": "Testing if note is being added and whether an ID is being given to the new note",
+      "title": "Second Note",
+      "text": "This note should have an ID of 1",
       "id": "1"
     },
     {
-      "title": "Note 3",
-      "text": "Testing after modifications",
-      "id": "2"
-    },
-    {
-      "title": "testing POST route",
-      "text": "this note is to test on Insomnia whether a new note is being added to the database file",
+      "title": "Fourth Note",
+      "text": "This note has an ID of 3",
       "id": "3"
-    },
-    {
-      "title": "Note 5",
-      "text": "Text for Note 5",
-      "id": "4"
     }
   ]
 }
