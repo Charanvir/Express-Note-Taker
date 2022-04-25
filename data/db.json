@@ -1,19 +1,19 @@
 {
   "note": [
     {
-      "title": "First Note",
-      "text": "This note should have an ID of 0",
+      "title": "Start Module 12",
+      "text": "Start taking notes for module 12",
       "id": "0"
     },
     {
-      "title": "Second Note",
-      "text": "This note should have an ID of 1",
+      "title": "Assignment 12",
+      "text": "Start and finish assignment 12",
       "id": "1"
     },
     {
-      "title": "Fourth Note",
-      "text": "This note has an ID of 3",
-      "id": "3"
+      "title": "Update online presence",
+      "text": "-Update GitHub profile\n-Update Linkedin profile\n-Update project portfolio",
+      "id": "2"
     }
   ]
 }
